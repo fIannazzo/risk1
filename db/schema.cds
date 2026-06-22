@@ -1,5 +1,4 @@
 namespace RiskManagement;
-
 entity Risks
 {
     key ID : UUID;
