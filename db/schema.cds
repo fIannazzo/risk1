@@ -3,7 +3,7 @@ namespace RiskManagement;
 entity Risks
 {
     key ID : UUID;
-    miti_id : Association to one Mitigations;
+    miti : Association to one Mitigations;
     title : String(100);
     prio : String(5);
     descr : String(100);
@@ -20,7 +20,7 @@ entity Mitigations
     description : String(100);
     owner : String(100);
     timeline : String(100);
-    risks : Association to many Risks on risks.miti_id = $self;
+    risks : Association to many Risks on risks.miti = $self;
 }
 
 entity BusinessPartnerA2X.A_BusinessPartner
